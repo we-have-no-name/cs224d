@@ -8,8 +8,7 @@ def sigmoid(x):
     ### YOUR CODE HERE
     x = np.array(x , dtype = 'f')
     x = np.reshape(x , x.size)
-    for i in range(len(x)) :
-        x[i] = 1 / (1 + np.exp(-1 * x[i]))
+    x = [(1 + np.exp(-1 * num) for num in x]
     ### END YOUR COD
     return np.reshape(x , sh)
 
